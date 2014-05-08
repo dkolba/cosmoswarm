@@ -1,0 +1,32 @@
+{
+  "name": "cosmoswarm",
+  "version": "0.0.0",
+  "description": "HTML5 shmup in the vein of Space Invaders and DoDonPachi",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {
+    "watchify": "~0.8.3",
+    "browserify": "~3.46.0",
+    "hammerjs": "~1.1.2"
+  },
+  "scripts": {
+    "bundle": "browserify main.js -o www/js/bundle.js",
+    "watch": "watchify main.js -o www/js/bundle.js -dv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dkolba/cosmoswarm.git"
+  },
+  "keywords": [
+    "HTML5",
+    "game",
+    "browser",
+    "mobile",
+    "shmup"
+  ],
+  "author": "Simon Bugert and Duncan Kolba",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dkolba/cosmoswarm/issues"
+  }
+}
