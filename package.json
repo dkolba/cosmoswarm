@@ -5,9 +5,10 @@
   "main": "server.js",
   "dependencies": {},
   "devDependencies": {
-    "watchify": "~0.8.3",
     "browserify": "~3.46.0",
-    "hammerjs": "~1.1.2"
+    "hammerjs": "~1.1.2",
+    "st": "^0.4.1",
+    "watchify": "~0.8.3"
   },
   "scripts": {
     "bundle": "browserify main.js -o www/js/bundle.js",
