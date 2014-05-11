@@ -25,4 +25,4 @@ build/Release
 node_modules
 
 # Don't check in browserify bundles
-www/js
+www/js/[^.]*
