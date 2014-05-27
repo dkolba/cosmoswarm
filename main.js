@@ -3,8 +3,7 @@ var hammer = require ('hammerjs')
   , ctx = canvas.getContext('2d')
   , img = new Image()   // Create new img element
   , i = 0
-  , starship = function() {}
-  , star = new starship()
+  , star = new Starship(0, 100)
   , EventEmitter = require('events').EventEmitter
   , gameLoop = require('./gameloop')
   , currentTime = 0
@@ -25,12 +24,16 @@ emitter.on('tap', function(event) {
   console.log(event.gesture.center.pageX, event.gesture.center.pageY);
 });
 
-starship.prototype.draw = function() {
-  return ctx.drawImage(img, i-100, Math.sin(i*0.5), 100, 100);
-};
+function Starship(x, y) {
+  this.x = x;
+  this.y = y;
+  this.draw = function() {
+    return ctx.drawImage(img, this.x-100, Math.sin(this.x*0.5)+this.y, 70,80);
+  };
+}
 
 function draw() {
-  i = (i + 1) % (canvas.width + 100);
+  star.x = (star.x + 1) % (canvas.width + 100);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   star.draw();
 }
