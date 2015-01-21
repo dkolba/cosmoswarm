@@ -4,22 +4,21 @@ HTML5 shmup in the vein of Space Invaders and DoDonPachi
 
 TODO
 ====
-- [ ] Use Poltergeist.js
-- [ ] Make animation time based
-- [ ] Use beefy
+- [ ] create game
 
 COMMANDS
 ========
-Serve www/ directory
+Put minified phaser.js in /www/js/
 
-    npm start
+    npm run init 
 
 
-Generate Javascript bundle from main.js to bundle.js in www/js/
+Start webpack-dev-server in hot mode
+
+    npm run watch
+
+
+Generate Javascript bundle from app.js to bundle.js in www/js/
 
     npm run bundle
 
-
-Watch for file changes and regenerate bundle
-
-    npm run watch

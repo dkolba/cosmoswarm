@@ -25,4 +25,5 @@ build/Release
 node_modules
 
 # Don't check in browserify bundles
-www/js/[^.]*
+www/js/bundle.js
+www/js/phaser.min.js
